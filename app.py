@@ -32,7 +32,7 @@ train['日期'].min(), train['日期'].max()
 (Timestamp('2018-01-24 00:00:00'),
 Timestamp('2019-02-28 00:00:00'))
 
-#make predictions
+#make predictions by using moving average
 preds = []
 for i in range(0,7):
     a = train['尖峰負載(MW)'][len(train)-7+i:].sum() + sum(preds)
