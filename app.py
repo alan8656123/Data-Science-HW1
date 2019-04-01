@@ -36,7 +36,6 @@ Timestamp('2019-02-28 00:00:00'))
 preds = []
 for i in range(0,7):
     a = train['尖峰負載(MW)'][len(train)-7+i:].sum() + sum(preds)
-    print(len(train)-7+i)
     b = a/7
     preds.append(b)
     sub_df=sub_df.append({'date': '2019040'+str(i+2),'peak_load(MW)':b}, ignore_index=True)
